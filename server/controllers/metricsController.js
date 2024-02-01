@@ -24,7 +24,8 @@ metricsController.getNodeList = async(req, res, next) => {
     let numOfDeployments;
     let numOfNamespaces;
 
-
+    const test = await k8s.topNodes();
+    console.log(test);
 
 
     // const axios = require('axios');
