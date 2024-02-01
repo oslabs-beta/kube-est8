@@ -6,7 +6,7 @@ const Main = () => {
 
     return (
 
-      <div>
+      <div className='Main'>
         <h1>Main page is connected</h1>
         <SideBar/>
         <Metrics/>

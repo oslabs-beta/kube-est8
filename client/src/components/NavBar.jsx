@@ -4,7 +4,7 @@ const NavBar = () => {
 
     return (
 
-      <div>
+      <div className='NavBar'>
         <h1>NavBar is connected</h1>
       </div>
 

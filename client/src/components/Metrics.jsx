@@ -5,7 +5,7 @@ const Metrics = () => {
 
     return (
 
-      <div>
+      <div className='Metrics'>
         <h1>Metrics is connected</h1>
         <MetricsTable/>
       </div>
