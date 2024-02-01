@@ -27,14 +27,14 @@ metricsController.getNodeList = async(req, res, next) => {
 
 
 
-    const axios = require('axios');
+    // const axios = require('axios');
 
-    const metricsServerApiUrl = 'http://127.0.0.1:56110/apis/metrics.k8s.io/v1beta1/nodes';
+    // const metricsServerApiUrl = 'http://127.0.0.1:56110/apis/metrics.k8s.io/v1beta1/nodes';
 
-    const metricsRes = await axios.get(metricsServerApiUrl)
-    //https://127.0.0.1:56110
+    // const metricsRes = await axios.get(metricsServerApiUrl)
+    // //https://127.0.0.1:56110
 
-    console.log(metricsRes);
+    // console.log(metricsRes);
 
 
 
