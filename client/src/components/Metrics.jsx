@@ -5,12 +5,11 @@ const Metrics = () => {
 
     return (
 
-      <div>
-        <h1>Metrics is connected</h1>
+      <div className='Metrics'>
         <MetricsTable/>
       </div>
 
     )
-  }
+}
 
   export default Metrics;

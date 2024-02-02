@@ -1,11 +1,14 @@
 import React from 'react';
+import grafanaGraph from '../assets/images/grafanaGraph.png';
+import prometheusGraph from '../assets/images/prometheusGraph.png';
 
 const MetricsTable = () => {
 
     return (
 
       <div className='MetricsTable'>
-        <h1>Metrics TABLE is connected</h1>
+        <img className='graph' src={grafanaGraph}/>
+        <img className='graph' src={prometheusGraph}/>
       </div>
 
     )
