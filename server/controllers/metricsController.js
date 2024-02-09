@@ -14,7 +14,7 @@ metricsController.getNodeList = async(req, res, next) => {
 
   try {
     const nodesList = await k8sApi.listNode();
-    console.log(nodesList.body.items[0]);
+    // console.log(nodesList.body.items[0]);
 
     const nodesArr = nodesList.body.items;
 
@@ -24,8 +24,11 @@ metricsController.getNodeList = async(req, res, next) => {
     let numOfDeployments;
     let numOfNamespaces;
 
-    const test = await k8s.topNodes();
-    console.log(test);
+    const test = await k8s.topNodes(k8sApi);
+    console.log(test, 'test');
+
+    const listNode = await k8sApi.listNode();
+
 
 
     // const axios = require('axios');
