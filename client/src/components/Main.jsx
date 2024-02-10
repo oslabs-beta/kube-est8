@@ -1,17 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SideBar from './SideBar.jsx'
 import Metrics from './Metrics.jsx'
 
-const Main = () => {
+const Main = (props) => {
 
-    return (
+  const [display, setDisplay] = useState('');
 
-      <div className='Main'>
-        <SideBar/>
-        <Metrics/>
-      </div>
-
-    )
+  // FUNCTION TO CHANGE STATE FOR RENDERING CLUSTER INFO IN METRICS TABLE
+  const clusterInfoRender = (e) => {
+    setDisplay('clusterInfo');
+    return;
   }
+
+
+
+
+
+  return (
+
+    <div className='Main'>
+      <SideBar display={display} clusterInfoRender={clusterInfoRender}/>
+      <Metrics display={display} clusterInfoRender={clusterInfoRender}/>
+    </div>
+
+  )
+}
 
   export default Main;

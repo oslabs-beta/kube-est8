@@ -1,12 +1,12 @@
 import React from 'react';
 import MetricsTable from './MetricsTable.jsx'
 
-const Metrics = () => {
+const Metrics = (props) => {
 
     return (
 
       <div className='Metrics'>
-        <MetricsTable/>
+        <MetricsTable display={props.display} />
       </div>
 
     )

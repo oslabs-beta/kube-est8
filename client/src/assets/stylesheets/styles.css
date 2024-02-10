@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   height: 100vh;
   width: 100vw;
-  background-color: #27272A;
+  background-color: var(--background-stone-900);
   color: var(--white);
-  --white: #F4F4F5;
+  --white: #F0F0F0;
   --dark-gray: #18181B;
+  --background-blue: #363349;
+  --background-gray: #232328;
+  --background-stone: #0C0A09;
+  --background-stone-900: #1C1917;
 }
 
 body {
   margin: 0;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -26,19 +32,17 @@ body {
 }
 
 .logo {
-  height: 10vw;
-  position: relative;
-  top: 30px;
+  height: min(20vw, 20vh);
   border-radius: 50%;
   border: 3px solid var(--dark-gray);
   padding: 0;
   transition: transform .2s;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
-
+  margin-top: 50px;
 }
 
 .logo:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -59,7 +63,7 @@ body {
   flex-direction: column;
   display: grid;
   border: none;
-  grid-template-rows: 1fr 5fr;
+  /* grid-template-rows: 1fr 5fr; */
 }
 
 .NavBar {
@@ -71,11 +75,12 @@ body {
   grid-column-start: 0;
   grid-column-end: 1;
   width: 20vw;
-  gap: 10px;
-  background-color: var(--dark-gray);
+
+  background-color: var(--background-stone);
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-right: 2px solid var(--background-stone);
 }
 
 button {
@@ -84,18 +89,35 @@ button {
   color: #D4D4D4;
 }
 
-.button:hover {
-}
-
-.Sidebar:first-child {
+.sidebar-buttons {
+  width: 100%;
   padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Sidebar>* {
-  width: 80%;
-  border-radius: 10px;
-  padding: 10px 20px;
+.sidebar-buttons>* {
+  text-align: center;
+  width: 100%;
+  font-size: min(2vw, 2vh);
+  padding: 20px 0;
+  font-family: 'Montserrat';
+  /* border-top: 1px solid gray; */
+  border-bottom: 1px solid gray;
+  cursor: pointer;
 }
+
+.sidebar-buttons>*:first-child {
+  border-top: 1px solid gray;
+
+}
+
+.sidebar-buttons>*:hover {
+  color: white;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.423);
+}
+
 
 .Main {
   flex: 1;
@@ -133,3 +155,29 @@ button {
   border: 2px solid black;
   margin: 20px;
 }
+
+.no-info {
+  display: flex;
+  justify-content: center;
+
+}
+
+.no-info-text {
+  font-family: 'Montserrat';
+  font-size: min(5vh, 5vw);
+  text-align: center;
+  padding: min(20vh, 20vw) 30px;
+
+}
+
+.text-span {
+  color: #455EB5;
+}
+
+.dataTitle {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  color: var(--white);
+}
+
+
+
