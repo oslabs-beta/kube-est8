@@ -25,7 +25,7 @@ metricsController.getNodeList = async(req, res, next) => {
     let numOfNamespaces;
 
 
-    const listNode = await k8sApi.listNode();
+    const listNode = await k8sApi.listNode(); 
 
 
     // const axios = require('axios');
@@ -58,6 +58,7 @@ metricsController.getNodeList = async(req, res, next) => {
   }
 
 }
+
 
 
 

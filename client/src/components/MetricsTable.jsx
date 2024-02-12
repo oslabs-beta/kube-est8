@@ -1,6 +1,7 @@
 import React from 'react';
 import grafanaGraph from '../assets/images/grafanaGraph.png';
 import prometheusGraph from '../assets/images/prometheusGraph.png';
+import PodInfo from './PodInfo.jsx'
 
 const MetricsTable = (props) => {
 
@@ -19,6 +20,12 @@ const MetricsTable = (props) => {
           </div>
         </div>
 
+      )
+    }
+
+    if (props.display === 'podInfo') {
+      return (
+        <PodInfo/>
       )
     }
 
