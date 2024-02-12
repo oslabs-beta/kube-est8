@@ -4,7 +4,7 @@ const metricsController = require('../controllers/metricsController');
 
 
 router.get('/', metricsController.getNodeList, (req,res) => {
-  return res.status(200).json(res.locals.nodesList);
+  return res.status(200).send(res.locals.nodesList);
 });
 
 
