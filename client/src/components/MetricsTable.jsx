@@ -1,6 +1,4 @@
 import React from 'react';
-import grafanaGraph from '../assets/images/grafanaGraph.png';
-import prometheusGraph from '../assets/images/prometheusGraph.png';
 import PodInfo from './PodInfo.jsx'
 
 const MetricsTable = (props) => {

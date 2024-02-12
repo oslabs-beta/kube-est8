@@ -8,10 +8,6 @@ const clusterMetricsList = ['cpu', 'memory']
 
 const SideBar = (props) => {
 
-
-
-
-
   return (
 
     <div className="Sidebar" clusterInfoRender={props.clusterInfoRender} podInfoRender={props.podInfoRender}>
