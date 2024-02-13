@@ -23,6 +23,21 @@ const PodInfo = (props) => {
     ) : (
       <p>Loading...</p>
     )} */}
+
+    
+    {/* When we have the data from backend, we will use something like this to render it to the frontend */}
+
+
+              {/* {nodesList && nodesList.map((node, index) => (
+            <tr key={index}>
+              <td>{node.nodeNumber}</td>
+              <td>{node.nodeName}</td>
+              <td>{node.cpuMemory}</td>
+              <td>{node.role}</td>
+              <td>{node.messageThroughput}</td>
+              <td>{node.numDeployments}</td>
+              <td>{node.numPods}</td>
+            </tr> */}
     <h1>Your Nodes</h1>
     <table class='nodes-table'>
       <thead>
