@@ -36,14 +36,10 @@ metricsController.getNodeList = async(req, res, next) => {
     //number of deployment:
     //number of pods:
 
-
     //find method for accessing number of pods
     let numOfPods;
     //find method for accessing number of deployments
     let numOfDeployments;
-
-
-  
 
     const listNode = await k8sApi.listNode(); 
 
