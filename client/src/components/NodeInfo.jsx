@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const PodInfo = (props) => {
+const NodeInfo = (props) => {
 
   const [nodesList, setNodesList] = useState(null);
 
@@ -87,4 +87,4 @@ const PodInfo = (props) => {
 );
 };
 
-export default PodInfo;
+export default NodeInfo;

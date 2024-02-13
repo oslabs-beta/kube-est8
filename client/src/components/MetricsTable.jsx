@@ -1,5 +1,5 @@
 import React from 'react';
-import PodInfo from './PodInfo.jsx'
+import NodeInfo from './NodeInfo.jsx'
 
 const MetricsTable = (props) => {
 
@@ -23,7 +23,7 @@ const MetricsTable = (props) => {
 
     if (props.display === 'podInfo') {
       return (
-        <PodInfo/>
+        <NodeInfo/>
       )
     }
 
