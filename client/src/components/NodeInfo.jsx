@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 const NodeInfo = (props) => {
 
   const [nodesList, setNodesList] = useState(null);
+  const [activeRow, setActiveRow] = useState(null)
+
 
   //meant to access the data from metricsController.getNodesList
   useEffect(() => {
@@ -15,6 +17,11 @@ const NodeInfo = (props) => {
 
       .catch((error) => console.log(error));
   }, []);
+
+  // const handleRowClick = (index) => {
+  //   //set active row index when a row is clicked
+  //   setActiveRow(index);
+  // }
 
   return (
     <div>
@@ -61,7 +68,7 @@ const NodeInfo = (props) => {
           <td>2 Deployments! </td>
           <td>5 pods! </td>
         </tr>
-        <tr class="active-row">
+        {/* <tr class="active-row"> */}
           <td>2</td>
           <td>Chunky Bean's Node</td>
           <td>56%</td>
@@ -69,9 +76,9 @@ const NodeInfo = (props) => {
           <td>The Message Throughput</td>
           <td>3 Deployments! </td>
           <td>7 pods! </td>
-        </tr>
+        {/* </tr> */}
         <tr>
-        <td>2</td>
+        <td>3</td>
           <td>Peep's Node</td>
           <td>70% CPU</td>
           <td>The role of the node </td>
