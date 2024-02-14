@@ -16,105 +16,98 @@ const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 //Initial middleware object
 const metricsController = {};
 
-// // adding method to metricsController
-// metricsController.getNodeList = async(req, res, next) => {
-
-//   try {
-
-//     //.listNode is an API client method (native built in method)
-//     const nodesList = await k8sApi.listNode();
-//     // console.log('NodeList -------->', nodesList);
-
-//     // const nodesArr = nodesList.body.items;
-
-//     let numOfNodes = nodesList.body.items.length;
-
-
-//     // TODO: Keep playing with the nodesList.body.items and/or nodeList....
-//     // To get importan information from each node like
-//       // UID
-//       // Namespace
-//     console.log('numOfNodes.body.items -------------------->', nodesList.body.items[0])
-
-//     res.locals.nodesList = {
-//       numOfNodes
-//     };
-
-//     return next();
-
-//     // ** TODO **
-//     //for each node: 
-//     //CPU/Memory:
-//     //Name:
-//     //Role:
-//     //Message throughput:
-//     //number of deployment:
-//     //number of pods:
-
-//     //find method for accessing number of pods
-//     // let numOfPods;
-//     //find method for accessing number of deployments
-//     // let numOfDeployments;
-
-
-//     // const test = await k8s.topNodes(k8sApi);
-//     // console.log(test, 'test');
-
-//     // const metricsClient = new k8s.Metrics(kc)
-//     // const nodeMetrics = await metricsClient.getNodeMetrics();
-//     // console.log(nodeMetrics, 'node metrics');
-
-    
-//   } catch (err) {
-//     console.error(err);
-//   }
-
-// }
-
-
-
 metricsController.getNodeList = async(req, res, next) => {
 
   try {
 
-    const nodesList = await k8sApi.listNode();
+    const whateverName = await k8sApi.listNode();
 
 
-    // ** TODO (For each Node)**
-    //CPU/Memory:
-    //Name:
-    //Role:
-    //Message throughput:
-    //number of deployment:
-    //number of pods:lis
+    // *** TODO *** Conver the memory in to Gigabytes
+    // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
     res.locals.nodesList = {
 
-      totalNumberOfNodes: nodesList.body.items.length,
-      masterNode: {
-      name: nodesList.body.items[0].metadata.name,
-      creationTime: nodesList.body.items[0].metadata.creationTimestamp,
-      UID: nodesList.body.items[0].metadata.uid,
-      memoryCapacity: 'n/a',
-      CPU: 'n/a',
-      role: 'n/a'
-      },
-      workerNode1: {
-        name: nodesList.body.items[1].metadata.name,
-        creationTime: nodesList.body.items[1].metadata.creationTimestamp,
-        UID: nodesList.body.items[1].metadata.uid
-      },
-      workerNode2: {
-        name: nodesList.body.items[2].metadata.name,
-        creationTime: nodesList.body.items[2].metadata.creationTimestamp,
-        UID: nodesList.body.items[2].metadata.uid
-      },
-      workerNode3: {
-        name: nodesList.body.items[3].metadata.name,
-        creationTime: nodesList.body.items[3].metadata.creationTimestamp,
-        UID: nodesList.body.items[3].metadata.uid
-      }
+      [whateverName.response.body.items[0].metadata.name]: {
+        name: whateverName.response.body.items[0].metadata.name,
+        uid: whateverName.response.body.items[0].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
+          status: whateverName.response.body.items[0].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[0].status.images.length
+    },
+
+      [whateverName.response.body.items[1].metadata.name]: {
+        name: whateverName.response.body.items[1].metadata.name,
+        uid: whateverName.response.body.items[1].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[1].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[1].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[1].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[1].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[1].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[1].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[1].status.conditions[2].message,
+          status: whateverName.response.body.items[1].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[1].status.images.length
+    },
+
+      [whateverName.response.body.items[2].metadata.name]: {
+        name: whateverName.response.body.items[2].metadata.name,
+        uid: whateverName.response.body.items[2].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[2].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[2].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[2].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[2].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[2].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[2].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[2].status.conditions[2].message,
+          status: whateverName.response.body.items[2].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[2].status.images.length
+    },
+
+
+
+      [whateverName.response.body.items[3].metadata.name]: {
+        name: whateverName.response.body.items[3].metadata.name,
+        uid: whateverName.response.body.items[3].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[3].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[3].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[3].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[3].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[3].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[3].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[3].status.conditions[2].message,
+          status: whateverName.response.body.items[3].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[3].status.images.length
+    }
+
     };
+
 
     return next();
 
