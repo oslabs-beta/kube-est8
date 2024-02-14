@@ -1,6 +1,8 @@
 import React from "react";
 import NavBar from './components/NavBar.jsx';
 import Main from './components/Main.jsx';
+import Flow from "./FlowChart.js";
+import './assets/stylesheets/styles.css'
 
 const App = () => {
 
@@ -9,6 +11,8 @@ const App = () => {
     <div className='root'>
       {/* <NavBar/> */}
       <Main/>
+      <Flow/>
+    
     </div>
 
   )
