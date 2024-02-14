@@ -17,7 +17,7 @@ const SideBar = (props) => {
 
       <div class="sidebar-buttons">
         <a className='a-36' onClick={props.clusterInfoRender}>Cluster Overview</a>
-        <a className='a-36' onClick={props.podInfoRender}>Deployments / Pods</a>
+        <a className='a-36' onClick={props.podInfoRender}>My Nodes</a>
         <a className='a-36' >Vulnerabilities Scan</a>
         <a className='a-36' >Settings</a>
       </div>

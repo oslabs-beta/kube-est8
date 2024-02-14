@@ -16,56 +16,102 @@ const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 //Initial middleware object
 const metricsController = {};
 
-//adding method to metricsController
 metricsController.getNodeList = async(req, res, next) => {
 
   try {
     //.listNode is an API client method (native built in method)
-    const nodesList = await k8sApi.listNode();
-    // console.log(nodesList.body.items[0]);
+    const whateverName = await k8sApi.listNode();; 
 
-    const nodesArr = nodesList.body.items;
+    // *** TODO *** Conver the memory in to Gigabytes
+    // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
-    let numOfNodes = nodesList.body.items.length;
+    res.locals.nodesList = [
 
-    //for each node: 
-    //CPU/Memory:
-    //Name:
-    //Role:
-    //Message throughput:
-    //number of deployment:
-    //number of pods:
+      {
+        name: whateverName.response.body.items[0].metadata.name,
+        uid: whateverName.response.body.items[0].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
+          status: whateverName.response.body.items[0].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[0].status.images.length
+      },
 
+      {
+        name: whateverName.response.body.items[1].metadata.name,
+        uid: whateverName.response.body.items[1].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[1].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[1].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[1].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[1].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[1].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[1].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[1].status.conditions[2].message,
+          status: whateverName.response.body.items[1].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[1].status.images.length
+      },
 
-    //find method for accessing number of pods
-    let numOfPods;
-    //find method for accessing number of deployments
-    let numOfDeployments;
+      {
+        name: whateverName.response.body.items[2].metadata.name,
+        uid: whateverName.response.body.items[2].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[2].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[2].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[2].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[2].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[2].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[2].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[2].status.conditions[2].message,
+          status: whateverName.response.body.items[2].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[2].status.images.length
+      },
 
+      {
+        name: whateverName.response.body.items[3].metadata.name,
+        uid: whateverName.response.body.items[3].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[3].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[3].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[3].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[3].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[3].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[3].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[3].status.conditions[2].message,
+          status: whateverName.response.body.items[3].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[3].status.images.length
+      }
 
-  
-
-    const listNode = await k8sApi.listNode(); 
-
-    const test = await k8s.topNodes(k8sApi);
-    console.log(test, 'test');
-
-    const metricsClient = new k8s.Metrics(kc)
-    const nodeMetrics = await metricsClient.getNodeMetrics();
-    console.log(nodeMetrics, 'node metrics');
-
-    res.locals.nodesList = {
-      numOfNodes,
-      numOfPods,
-      numOfDeployments,
-    };
+    ];
 
     return next();
+
   } catch (err) {
     console.error(err);
-  }
+  };
 
-}
+};
 
 
 
