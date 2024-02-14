@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+import {userAuth} from '../context/AuthContent.js';
 import SideBar from './SideBar.jsx'
 import Metrics from './Metrics.jsx'
 
 const Main = (props) => {
 
   const [display, setDisplay] = useState('');
+
 
   // FUNCTION TO CHANGE STATE FOR RENDERING CLUSTER INFO IN METRICS TABLE
   const clusterInfoRender = (e) => {
