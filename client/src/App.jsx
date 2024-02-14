@@ -4,6 +4,8 @@ import { AuthContextProvider } from "./context/AuthContent.js";
 import NavBar from "./components/NavBar.jsx";
 import Main from "./components/Main.jsx";
 import Signin from './components/Signin.jsx';
+import WelcomePage from './components/WelcomePage.jsx'
+import Protected from './components/Protected.js'
 
 
 const App = () => {
@@ -14,7 +16,8 @@ const App = () => {
         {/* <Router> */}
            <Routes>
 
-        <Route path='/' element={<Main/>} />
+        <Route path='/' element={<WelcomePage/>} />
+        <Route path='/main' element={<Protected><Main/></Protected>} />
         <Route path='/signin' element={<Signin/>}/>
           </Routes>
         {/* </Router> */}
