@@ -12,15 +12,18 @@ const Main = (props) => {
     return;
   }
 
-
+  const homeRender = () => {
+    setDisplay('');
+    return;
+  }
 
 
 
   return (
 
     <div className='Main'>
-      <SideBar display={display} clusterInfoRender={clusterInfoRender}/>
-      <Metrics display={display} clusterInfoRender={clusterInfoRender}/>
+      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender}/>
+      <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender}/>
     </div>
 
   )
