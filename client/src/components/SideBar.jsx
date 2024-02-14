@@ -12,7 +12,7 @@ const SideBar = (props) => {
 
     <div className="Sidebar" clusterInfoRender={props.clusterInfoRender} podInfoRender={props.podInfoRender}>
 
-    <img className='logo' src={mainLogo}></img>
+    <img className='logo' src={mainLogo} onClick={props.homeRender}></img>
 
 
       <div class="sidebar-buttons">
