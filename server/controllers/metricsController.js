@@ -26,6 +26,8 @@ metricsController.getNodeList = async(req, res, next) => {
     // *** TODO *** Conver the memory in to Gigabytes
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
+    // res.locals.nodesList = 'weeee'
+
     res.locals.nodesList = {
 
       [whateverName.response.body.items[0].metadata.name]: {
@@ -46,6 +48,7 @@ metricsController.getNodeList = async(req, res, next) => {
         },
         totalImages: whateverName.response.body.items[0].status.images.length
     },
+  
 
       [whateverName.response.body.items[1].metadata.name]: {
         name: whateverName.response.body.items[1].metadata.name,
