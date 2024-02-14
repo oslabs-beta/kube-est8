@@ -52,7 +52,29 @@ body {
 
 .mainTitle {
   font-family: 'Sixtyfour','Copperplate';
+  text-align: center;
 
+}
+
+/* NAVBAR SIGN IN BUTTON */
+
+.signInLink{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem; 
+  border-radius: 5px; /* Rounded corners */
+  background-color: #007bff; /* Sign In button background color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+
+    /* Additional styles for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    cursor: pointer;
+
+}
+
+.signInLink:hover {
+  background-color: #0056b3; /* Darker color on hover */
 }
 
 .root {
