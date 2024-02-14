@@ -22,6 +22,9 @@ export const AuthContextProvider = ({ children }) => {
     const googleSignIn = () => {
         //create GoogleAuthProvider (this is built in method with firebase)
         const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({
+          prompt: 'select_account'
+        })
         //take auth and provider with pop up
         signInWithPopup(auth, provider);
         // signInWithRedirect(auth, provider);

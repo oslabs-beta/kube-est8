@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
   height: 100vh;
   width: 100vw;
   background-color: var(--background-stone-900);
   color: var(--white);
-  --white: #F0F0F0;
-  --dark-gray: #18181B;
+  --white: #f0f0f0;
+  --dark-gray: #18181b;
   --background-blue: #363349;
   --background-gray: #232328;
-  --background-stone: #0C0A09;
-  --background-stone-900: #1C1917;
+  --background-stone: #0c0a09;
+  --background-stone-900: #1c1917;
 }
 
 body {
@@ -20,13 +20,12 @@ body {
   overflow-x: hidden;
 }
 
-
 .logoBox {
   display: flex;
   align-items: center;
   padding-left: 5vw;
   gap: 10vw;
-  >* {
+  > * {
     padding: 20px;
   }
 }
@@ -36,7 +35,7 @@ body {
   border-radius: 50%;
   border: 3px solid var(--dark-gray);
   padding: 0;
-  transition: transform .2s;
+  transition: transform 0.2s;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
   margin-top: 50px;
 }
@@ -51,26 +50,28 @@ body {
 }
 
 .mainTitle {
-  font-family: 'Sixtyfour','Copperplate';
+  font-family: "Montserrat", "Copperplate";
   text-align: center;
-
 }
 
 /* NAVBAR SIGN IN BUTTON */
 
-.signInLink{
+.signInLink {
+  height: 25%;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 0.5rem 1rem; 
+  font-size: 0.7em;
+  padding: 0.5rem 1rem;
   border-radius: 5px; /* Rounded corners */
-  background-color: #007bff; /* Sign In button background color */
+  background-color: #3d8ce0; /* Sign In button background color */
   transition: background-color 0.3s ease; /* Smooth transition */
 
-    /* Additional styles for a modern look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    cursor: pointer;
-
+  /* Additional styles for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer;
 }
 
 .signInLink:hover {
@@ -83,7 +84,6 @@ body {
 
   display: flex;
   flex-direction: column;
-  display: grid;
   border: none;
   /* grid-template-rows: 1fr 5fr; */
 }
@@ -91,6 +91,8 @@ body {
 .NavBar {
   background-color: var(--dark-gray);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Sidebar {
@@ -107,8 +109,8 @@ body {
 
 button {
   cursor: pointer;
-  background-color: #3F3F46;
-  color: #D4D4D4;
+  background-color: #3f3f46;
+  color: #d4d4d4;
 }
 
 .sidebar-buttons {
@@ -119,27 +121,25 @@ button {
   align-items: center;
 }
 
-.sidebar-buttons>* {
+.sidebar-buttons > * {
   text-align: center;
   width: 100%;
   font-size: min(2vw, 2vh);
   padding: 20px 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   /* border-top: 1px solid gray; */
   border-bottom: 1px solid gray;
   cursor: pointer;
 }
 
-.sidebar-buttons>*:first-child {
+.sidebar-buttons > *:first-child {
   border-top: 1px solid gray;
-
 }
 
-.sidebar-buttons>*:hover {
+.sidebar-buttons > *:hover {
   color: white;
   box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.423);
 }
-
 
 .Main {
   flex: 1;
@@ -157,14 +157,12 @@ button {
   margin: calc(5vh + 1px);
   display: grid;
   justify-items: center;
-
 }
 
 .grafana1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-
 }
 
 /* iframe {
@@ -181,23 +179,21 @@ button {
 .no-info {
   display: flex;
   justify-content: center;
-
 }
 
 .no-info-text {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: min(5vh, 5vw);
   text-align: center;
   padding: min(20vh, 20vw) 30px;
-
 }
 
 .text-span {
-  color: #455EB5;
+  color: #455eb5;
 }
 
 .dataTitle {
-  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   color: var(--white);
 }
 
@@ -205,30 +201,30 @@ button {
 
 .nodes-table {
   border-collapse: collapse;
-  margin: 25px 0; 
+  margin: 25px 0;
   font-size: 0.9em;
-  font-family: sans-serif; 
-  min-width: 400px; 
+  font-family: sans-serif;
+  min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  border-radius: 5px 5px 0 0; 
-  overflow: hidden; 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .nodes-table thead tr {
   background-color: #021e18;
   color: #ffffff;
   text-align: left;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
-.nodes-table th, 
+.nodes-table th,
 .nodes-table td {
-  padding: 12px 15px; 
+  padding: 12px 15px;
 }
 
 .nodes-table tbody tr {
-  border-bottom: 1px solid #dddddddd; 
+  border-bottom: 1px solid #dddddddd;
 }
 
 .nodes-table tbody tr:nth-of-type(even) {
@@ -241,5 +237,5 @@ button {
 
 .nodes-table tbody tr:active-row {
   font-weight: bold;
-  color: #009879
+  color: #009879;
 }
