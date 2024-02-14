@@ -20,31 +20,7 @@ metricsController.getNodeList = async(req, res, next) => {
 
   try {
     //.listNode is an API client method (native built in method)
-    const nodesList = await k8sApi.listNode();
-    // console.log(nodesList.body.items[0]);
-
-    const nodesArr = nodesList.body.items;
-
-    let numOfNodes = nodesList.body.items.length;
-
-    //for each node: 
-    //CPU/Memory:
-    //Name:
-    //Role:
-    //Message throughput:
-    //number of deployment:
-    //number of pods:
-
-
-    //find method for accessing number of pods
-    let numOfPods;
-    //find method for accessing number of deployments
-    let numOfDeployments;
-
-
-  
-
-    const listNode = await k8sApi.listNode(); 
+    const whateverName = await k8sApi.listNode();; 
 
     // *** TODO *** Conver the memory in to Gigabytes
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
