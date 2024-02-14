@@ -1,5 +1,7 @@
 import React from 'react';
 import mainLogo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom'; 
+import '../assets/stylesheets/styles.css'
 
 
 const NavBar = () => {
@@ -7,10 +9,11 @@ const NavBar = () => {
     return (
 
       <div className='NavBar'>
-        <div className='logoBox'>
-          <img className='logo' src={mainLogo}/>
+        {/* <div className='logoBox'> */}
+          {/* <img className='logo' src={mainLogo}/> */}
           <h1 className='mainTitle' >Kube Est8</h1>
-        </div>
+        {/* </div> */}
+        <Link to='/signin' className='signInLink'>Sign In!</Link>
       </div>
 
     )
