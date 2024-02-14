@@ -1,5 +1,6 @@
 import React from 'react';
 import NodeInfo from './NodeInfo.jsx'
+import { UserAuth } from '../context/AuthContent.js';
 
 const MetricsTable = (props) => {
 
@@ -29,11 +30,13 @@ const MetricsTable = (props) => {
       )
     }
 
+    const { user } = UserAuth(); 
+
     /*-----------------------IF USER JUST ARRIVED / NO DATA LOADED------------------------*/
     return (
       <div className='no-info'>
         <div className='no-info-text'>
-          Welcome to your <span className='text-span'>Kube Est8</span>.
+          Welcome, {user?.displayName}  to your <span className='text-span'>Kube Est8</span>.
           <br></br>
           Please use the sidebar to render desired cluster info.
         </div>
