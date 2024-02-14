@@ -22,15 +22,12 @@ metricsController.getNodeList = async(req, res, next) => {
 
     const whateverName = await k8sApi.listNode();
 
-
     // *** TODO *** Conver the memory in to Gigabytes
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
-    // res.locals.nodesList = 'weeee'
+    res.locals.nodesList = [
 
-    res.locals.nodesList = {
-
-      [whateverName.response.body.items[0].metadata.name]: {
+      {
         name: whateverName.response.body.items[0].metadata.name,
         uid: whateverName.response.body.items[0].metadata.uid,
         creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
@@ -47,10 +44,9 @@ metricsController.getNodeList = async(req, res, next) => {
           status: whateverName.response.body.items[0].status.conditions[3].message
         },
         totalImages: whateverName.response.body.items[0].status.images.length
-    },
-  
+      },
 
-      [whateverName.response.body.items[1].metadata.name]: {
+      {
         name: whateverName.response.body.items[1].metadata.name,
         uid: whateverName.response.body.items[1].metadata.uid,
         creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
@@ -67,9 +63,9 @@ metricsController.getNodeList = async(req, res, next) => {
           status: whateverName.response.body.items[1].status.conditions[3].message
         },
         totalImages: whateverName.response.body.items[1].status.images.length
-    },
+      },
 
-      [whateverName.response.body.items[2].metadata.name]: {
+      {
         name: whateverName.response.body.items[2].metadata.name,
         uid: whateverName.response.body.items[2].metadata.uid,
         creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
@@ -86,11 +82,9 @@ metricsController.getNodeList = async(req, res, next) => {
           status: whateverName.response.body.items[2].status.conditions[3].message
         },
         totalImages: whateverName.response.body.items[2].status.images.length
-    },
+      },
 
-
-
-      [whateverName.response.body.items[3].metadata.name]: {
+      {
         name: whateverName.response.body.items[3].metadata.name,
         uid: whateverName.response.body.items[3].metadata.uid,
         creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
@@ -107,10 +101,9 @@ metricsController.getNodeList = async(req, res, next) => {
           status: whateverName.response.body.items[3].status.conditions[3].message
         },
         totalImages: whateverName.response.body.items[3].status.images.length
-    }
+      }
 
-    };
-
+    ];
 
     return next();
 
