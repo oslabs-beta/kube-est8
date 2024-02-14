@@ -12,6 +12,12 @@ const Main = (props) => {
     return;
   }
 
+  // FUNCTION TO CHANGE STATE FOR RENDERING POD INFO
+  const podInfoRender = (e) => {
+    setDisplay('podInfo');
+    return;
+  }
+
   const homeRender = () => {
     setDisplay('');
     return;
@@ -22,8 +28,8 @@ const Main = (props) => {
   return (
 
     <div className='Main'>
-      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender}/>
-      <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender}/>
+      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
+      <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
     </div>
 
   )
