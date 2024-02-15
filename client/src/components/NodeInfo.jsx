@@ -16,12 +16,26 @@ const NodeInfo = (props) => {
     setNodesList(await response.json())
   };
 
-
   return (
     <div>
       {nodesList.map((data) => {
         return (
-          <div>{[data]}</div>
+          <div>
+          <p>{`Name: ${data.name}`}</p>
+          <p>{`UID: ${data.uid}`}</p>
+          <p>{`Day created: ${data.creationTimestamp}`}</p>
+          <p>{`CPU capacity: ${data.capacity.cpuCapacity}`}</p>
+          <p>{`Memory capacity: ${data.capacity.memoryCapacity}`}</p>
+          <p>{`Pod capacity: ${data.capacity.podsCapacity}`}</p>
+          <p>{`Last heartbeat: ${data.presureStatus.lastHeartbeatTime}`}</p>
+          <p>{`Kubelet status: ${data.presureStatus.status}`}</p>
+          <p>{`Memory pressure: ${data.presureStatus.memoryPressure}`}</p>
+          <p>{`Disk pressure: ${data.presureStatus.diskPressure}`}</p>
+          <p>{`'PID pressure': ${data.presureStatus.PIDPressure}`}</p>
+          <p>{`Total images: ${data.totalImages}`}</p>
+          <p>----------------------------------------------------------------</p>
+
+          </div>
         )
       })
 
@@ -29,6 +43,55 @@ const NodeInfo = (props) => {
     </div>
 
   );
+
+
+  // const courses = [
+
+  //   {
+  //     id: 0,
+  //     name: 'Full Stack Developement Program',
+  //     price: '89,999'
+  //   },
+  
+  //   {
+  
+  //     id: 1,
+  //     name: 'Python Automation Testing Program',
+  //     price: '64,999'
+  //   },
+  
+  //   {
+  //     id: 2,
+  //     name: 'UI/UX Program',
+  //     price: '89,999'
+  //   }
+  
+  // ]
+
+  // const arrayDataItems = courses.map(course => 
+  //   <li key={course.id}>
+  //     <p>{course.name}</p>
+  //     <span>{course.price}</span>
+  //   </li>
+  // )
+
+
+  // return (
+  //   <div className="container">
+  //     <div>
+  //       <h1>Render List/Array of Items with Key</h1>
+  //     </div>
+
+  //     {/* returning arrayDataItems wrapped in <ul> */}
+  //     <ul>{arrayDataItems[1]}</ul>
+  //   </div>
+  // );
+
+
+
+  //TODO: Connect the information of both articles.... to make the data render in the screeen ****
+
+
 
   
 

@@ -26,112 +26,114 @@ metricsController.getNodeList = async(req, res, next) => {
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
 
-    res.locals.nodesList = [
+    // res.locals.nodesList = [
 
-      [
-        whateverName.response.body.items[0].metadata.name,
-        whateverName.response.body.items[0].metadata.uid,
-        whateverName.response.body.items[0].metadata.creationTimestamp,
-        // capacity: {
-        //   cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
-        //   memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
-        //   podsCapacity: whateverName.response.body.items[0].status.capacity.pods
-        // },
-        // presureStatus: {
-        //   lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
-        //   memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
-        //   diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
-        //   PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
-        //   status: whateverName.response.body.items[0].status.conditions[3].message
-        // },
-        // totalImages: whateverName.response.body.items[0].status.images.length
-      ]
+    //   [
+    //     {
+    //     test: whateverName.response.body.items[0].metadata.name,
+    //     test1: whateverName.response.body.items[0].metadata.uid,
+    //     test2: whateverName.response.body.items[0].metadata.creationTimestamp,
+    //     }
+    //     // capacity: {
+    //     //   cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
+    //     //   memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
+    //     //   podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+    //     // },
+    //     // presureStatus: {
+    //     //   lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+    //     //   memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
+    //     //   diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
+    //     //   PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
+    //     //   status: whateverName.response.body.items[0].status.conditions[3].message
+    //     // },
+    //     // totalImages: whateverName.response.body.items[0].status.images.length
+    //   ]
 
-    ];
+    // ];
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // The code below is functional if you use postman: -----
 
-    // res.locals.nodesList = [
+    res.locals.nodesList = [
 
-    //   {
-    //     name: whateverName.response.body.items[0].metadata.name,
-    //     uid: whateverName.response.body.items[0].metadata.uid,
-    //     creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
-    //     capacity: {
-    //       cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
-    //       memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
-    //       podsCapacity: whateverName.response.body.items[0].status.capacity.pods
-    //     },
-    //     presureStatus: {
-    //       lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
-    //       memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
-    //       diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
-    //       PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
-    //       status: whateverName.response.body.items[0].status.conditions[3].message
-    //     },
-    //     totalImages: whateverName.response.body.items[0].status.images.length
-    //   }
+      {
+        name: whateverName.response.body.items[0].metadata.name,
+        uid: whateverName.response.body.items[0].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
+          status: whateverName.response.body.items[0].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[0].status.images.length
+      },
 
-    //   {
-    //     name: whateverName.response.body.items[1].metadata.name,
-    //     uid: whateverName.response.body.items[1].metadata.uid,
-    //     creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
-    //     capacity: {
-    //       cpuCapacity: whateverName.response.body.items[1].status.capacity.cpu,
-    //       memoryCapacity: whateverName.response.body.items[1].status.capacity.memory,
-    //       podsCapacity: whateverName.response.body.items[1].status.capacity.pods
-    //     },
-    //     presureStatus: {
-    //       lastHeartbeatTime: whateverName.response.body.items[1].status.conditions[0].lastHeartbeatTime,
-    //       memoryPressure: whateverName.response.body.items[1].status.conditions[0].message,
-    //       diskPressure: whateverName.response.body.items[1].status.conditions[1].message,
-    //       PIDPressure: whateverName.response.body.items[1].status.conditions[2].message,
-    //       status: whateverName.response.body.items[1].status.conditions[3].message
-    //     },
-    //     totalImages: whateverName.response.body.items[1].status.images.length
-    //   },
+      {
+        name: whateverName.response.body.items[1].metadata.name,
+        uid: whateverName.response.body.items[1].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[1].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[1].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[1].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[1].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[1].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[1].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[1].status.conditions[2].message,
+          status: whateverName.response.body.items[1].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[1].status.images.length
+      },
 
-    //   {
-    //     name: whateverName.response.body.items[2].metadata.name,
-    //     uid: whateverName.response.body.items[2].metadata.uid,
-    //     creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
-    //     capacity: {
-    //       cpuCapacity: whateverName.response.body.items[2].status.capacity.cpu,
-    //       memoryCapacity: whateverName.response.body.items[2].status.capacity.memory,
-    //       podsCapacity: whateverName.response.body.items[2].status.capacity.pods
-    //     },
-    //     presureStatus: {
-    //       lastHeartbeatTime: whateverName.response.body.items[2].status.conditions[0].lastHeartbeatTime,
-    //       memoryPressure: whateverName.response.body.items[2].status.conditions[0].message,
-    //       diskPressure: whateverName.response.body.items[2].status.conditions[1].message,
-    //       PIDPressure: whateverName.response.body.items[2].status.conditions[2].message,
-    //       status: whateverName.response.body.items[2].status.conditions[3].message
-    //     },
-    //     totalImages: whateverName.response.body.items[2].status.images.length
-    //   },
+      {
+        name: whateverName.response.body.items[2].metadata.name,
+        uid: whateverName.response.body.items[2].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[2].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[2].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[2].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[2].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[2].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[2].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[2].status.conditions[2].message,
+          status: whateverName.response.body.items[2].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[2].status.images.length
+      },
 
-    //   {
-    //     name: whateverName.response.body.items[3].metadata.name,
-    //     uid: whateverName.response.body.items[3].metadata.uid,
-    //     creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
-    //     capacity: {
-    //       cpuCapacity: whateverName.response.body.items[3].status.capacity.cpu,
-    //       memoryCapacity: whateverName.response.body.items[3].status.capacity.memory,
-    //       podsCapacity: whateverName.response.body.items[3].status.capacity.pods
-    //     },
-    //     presureStatus: {
-    //       lastHeartbeatTime: whateverName.response.body.items[3].status.conditions[0].lastHeartbeatTime,
-    //       memoryPressure: whateverName.response.body.items[3].status.conditions[0].message,
-    //       diskPressure: whateverName.response.body.items[3].status.conditions[1].message,
-    //       PIDPressure: whateverName.response.body.items[3].status.conditions[2].message,
-    //       status: whateverName.response.body.items[3].status.conditions[3].message
-    //     },
-    //     totalImages: whateverName.response.body.items[3].status.images.length
-    //   }
+      {
+        name: whateverName.response.body.items[3].metadata.name,
+        uid: whateverName.response.body.items[3].metadata.uid,
+        creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
+        capacity: {
+          cpuCapacity: whateverName.response.body.items[3].status.capacity.cpu,
+          memoryCapacity: whateverName.response.body.items[3].status.capacity.memory,
+          podsCapacity: whateverName.response.body.items[3].status.capacity.pods
+        },
+        presureStatus: {
+          lastHeartbeatTime: whateverName.response.body.items[3].status.conditions[0].lastHeartbeatTime,
+          memoryPressure: whateverName.response.body.items[3].status.conditions[0].message,
+          diskPressure: whateverName.response.body.items[3].status.conditions[1].message,
+          PIDPressure: whateverName.response.body.items[3].status.conditions[2].message,
+          status: whateverName.response.body.items[3].status.conditions[3].message
+        },
+        totalImages: whateverName.response.body.items[3].status.images.length
+      }
 
-    // ];
+    ];
 
     return next();
 
