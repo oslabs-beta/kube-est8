@@ -20,21 +20,20 @@ const NodeInfo = (props) => {
     <div>
       {nodesList.map((data) => {
         return (
-          <div>
-          <p>{`Name: ${data.name}`}</p>
-          <p>{`UID: ${data.uid}`}</p>
-          <p>{`Day created: ${data.creationTimestamp}`}</p>
-          <p>{`CPU capacity: ${data.capacity.cpuCapacity}`}</p>
-          <p>{`Memory capacity: ${data.capacity.memoryCapacity}`}</p>
-          <p>{`Pod capacity: ${data.capacity.podsCapacity}`}</p>
-          <p>{`Last heartbeat: ${data.presureStatus.lastHeartbeatTime}`}</p>
-          <p>{`Kubelet status: ${data.presureStatus.status}`}</p>
-          <p>{`Memory pressure: ${data.presureStatus.memoryPressure}`}</p>
-          <p>{`Disk pressure: ${data.presureStatus.diskPressure}`}</p>
-          <p>{`'PID pressure': ${data.presureStatus.PIDPressure}`}</p>
-          <p>{`Total images: ${data.totalImages}`}</p>
+          <div className="something">
+          <p className="text">{`Name: ${data.name}`}</p> 
+          <p className="text">{`UID: ${data.uid}`}</p>
+          <p className="text">{`Day created: ${data.creationTimestamp}`}</p>
+          <p className="text">{`CPU capacity: ${data.capacity.cpuCapacity}`}</p>
+          <p className="text">{`Memory capacity: ${data.capacity.memoryCapacity}`}</p>
+          <p className="text">{`Pod capacity: ${data.capacity.podsCapacity}`}</p>
+          <p className="text">{`Last heartbeat: ${data.presureStatus.lastHeartbeatTime}`}</p>
+          <p className="text">{`Kubelet status: ${data.presureStatus.status}`}</p>
+          <p className="text">{`Memory pressure: ${data.presureStatus.memoryPressure}`}</p>
+          <p className="text">{`Disk pressure: ${data.presureStatus.diskPressure}`}</p>
+          <p className="text">{`PID pressure: ${data.presureStatus.PIDPressure}`}</p>
+          <p className="text">{`Total images: ${data.totalImages}`}</p>
           <p>----------------------------------------------------------------</p>
-
           </div>
         )
       })

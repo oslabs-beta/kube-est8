@@ -337,3 +337,14 @@ button {
   width: '100%';
   height: 300;
 }
+
+.something {
+  margin-left: 20px;
+  margin-right: 300px;
+  background-color: white;
+}
+
+.text {
+  color: rgb(56, 56, 175);
+}
+
