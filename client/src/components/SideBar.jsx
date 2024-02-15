@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect } from 'react';
+// import ReactDOM from 'react-dom';
 import mainLogo from '../assets/images/logo.png';
 
 
-const clusterMetricsList = ['cpu', 'memory']
-
-
 const SideBar = (props) => {
+
+  // It seems this code on line 9 is not been use
+  const clusterMetricsList = ['cpu', 'memory']
 
   return (
 
@@ -23,9 +23,7 @@ const SideBar = (props) => {
       </div>
 
     </div>
-
-
   )
-}
+};
 
 export default SideBar;

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const cors = require('cors');
 const PORT = 3333;
 
 const metricsRouter = require('./routes/metricsRouter');
@@ -8,6 +9,7 @@ const metricsRouter = require('./routes/metricsRouter');
 // HANDLE PARSING OF REQUEST BODY
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 // SERVE STATIC FILES
 app.use(express.static(path.resolve(__dirname, '../client/public')));

@@ -25,6 +25,36 @@ metricsController.getNodeList = async(req, res, next) => {
     // *** TODO *** Conver the memory in to Gigabytes
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
 
+
+    // res.locals.nodesList = [
+
+    //   [
+    //     {
+    //     test: whateverName.response.body.items[0].metadata.name,
+    //     test1: whateverName.response.body.items[0].metadata.uid,
+    //     test2: whateverName.response.body.items[0].metadata.creationTimestamp,
+    //     }
+    //     // capacity: {
+    //     //   cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
+    //     //   memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
+    //     //   podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+    //     // },
+    //     // presureStatus: {
+    //     //   lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+    //     //   memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
+    //     //   diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
+    //     //   PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
+    //     //   status: whateverName.response.body.items[0].status.conditions[3].message
+    //     // },
+    //     // totalImages: whateverName.response.body.items[0].status.images.length
+    //   ]
+
+    // ];
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // The code below is functional if you use postman: -----
+
     res.locals.nodesList = [
 
       {
