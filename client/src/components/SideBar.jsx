@@ -5,22 +5,8 @@ import mainLogo from '../assets/images/logo.png';
 
 const SideBar = (props) => {
 
+  // It seems this code on line 9 is not been use
   const clusterMetricsList = ['cpu', 'memory']
-
-  // *** This handle click does a fetch, request and the front end is console login it
-  const handleClick = () => {
-    fetch('http://localhost:3333/metrics')
-      .then((response) => response.json())
-      .then((data) => {
-
-
-        // return <div>${data}</div>
-
-        console.log('This is the data -------->', data);
-      })
-      .catch((error) => console.log(error));
-  };
-
 
   return (
 

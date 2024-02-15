@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const NodeInfo = (props) => {
 
-  
-  // TODO: Make the data render into the display ---
+  // All this peace of code, fetches the data to the server, iterates over the data
+  //and then is tranfer so is render into the Main display.
   const [nodesList, setNodesList] = useState([]);
 
   useEffect(() => {
@@ -44,56 +44,9 @@ const NodeInfo = (props) => {
 
   );
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  // const courses = [
-
-  //   {
-  //     id: 0,
-  //     name: 'Full Stack Developement Program',
-  //     price: '89,999'
-  //   },
-  
-  //   {
-  
-  //     id: 1,
-  //     name: 'Python Automation Testing Program',
-  //     price: '64,999'
-  //   },
-  
-  //   {
-  //     id: 2,
-  //     name: 'UI/UX Program',
-  //     price: '89,999'
-  //   }
-  
-  // ]
-
-  // const arrayDataItems = courses.map(course => 
-  //   <li key={course.id}>
-  //     <p>{course.name}</p>
-  //     <span>{course.price}</span>
-  //   </li>
-  // )
-
-
-  // return (
-  //   <div className="container">
-  //     <div>
-  //       <h1>Render List/Array of Items with Key</h1>
-  //     </div>
-
-  //     {/* returning arrayDataItems wrapped in <ul> */}
-  //     <ul>{arrayDataItems[1]}</ul>
-  //   </div>
-  // );
-
-
-
-  //TODO: Connect the information of both articles.... to make the data render in the screeen ****
-
-
-
-  
+  // The code below will render in the screen the chart that Erika created
 
   // return (
   //   <div>
