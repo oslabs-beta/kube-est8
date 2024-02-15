@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const NodeInfo = (props) => {
 
+  /*
+  // TODO: Make the data render into the display ---
   const [nodesList, setNodesList] = useState([]);
 
   useEffect(() => {
@@ -9,9 +11,26 @@ const NodeInfo = (props) => {
   }, []);
 
   const nodes = async () => {
-    const response =
+    const response = await fetch('http://localhost:3333/metrics');
+
+    setNodesList(await response.json())
   };
 
+
+  return (
+    <div>
+      {nodesList.map((data) => {
+        return (
+          <div>{[data]}</div>
+        )
+      })
+
+      }
+    </div>
+
+  );
+
+  */
 
   return (
     <div>
