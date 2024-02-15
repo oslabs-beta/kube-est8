@@ -4,8 +4,14 @@
     background-color: rgb(62, 9, 32);
 }
 .custom-background {
+    z-index: -1; /* Lower the z-index */
+    opacity: 0.5; /* Reduce the opacity */
     
 }
 .custom-controls {
     z-index: 20;
 }
+.simple-background {
+    background-color: #fff; /* Use a simple background color */
+    opacity: 0.5; /* Adjust opacity if needed */
+  }

@@ -56,6 +56,8 @@ return (
   <div className="flow-container"  style = {{ height: '600px', width: '100%' }} >
 
      <ReactFlow  nodes = {initialNodes} edges={initialEdges} >
+     {/* <div className="simple-background" /> */}
+
           <Background className="custom-background"/> 
       <Controls className="custom-controls" /> 
           </ReactFlow>
