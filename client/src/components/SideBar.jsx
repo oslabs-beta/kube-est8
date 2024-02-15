@@ -10,7 +10,7 @@ const SideBar = (props) => {
 
   return (
 
-    <div className="Sidebar" clusterInfoRender={props.clusterInfoRender} podInfoRender={props.podInfoRender}>
+    <div className="Sidebar" clusterInfoRender={props.clusterInfoRender} podInfoRender={props.podInfoRender} flowChartRender = {props.flowChartRender}>
 
     <img className='logo' src={mainLogo}></img>
 
@@ -18,7 +18,7 @@ const SideBar = (props) => {
       <div class="sidebar-buttons">
         <a className='a-36' onClick={props.clusterInfoRender}>Cluster Overview</a>
         <a className='a-36' onClick={props.podInfoRender}>Deployments / Pods</a>
-        <a className='a-36' >Vulnerabilities Scan</a>
+        <a className='a-36' onClick={props.flowChartRender}>Flow Chart </a>
         <a className='a-36' >Settings</a>
       </div>
 

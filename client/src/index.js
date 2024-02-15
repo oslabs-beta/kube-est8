@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from "react-dom/client";
 import './assets/stylesheets/styles.css';
-import Flow from './FlowChart.js';
+import Flow from './components/FlowChart.js';
 
 
 import App from './App.jsx';

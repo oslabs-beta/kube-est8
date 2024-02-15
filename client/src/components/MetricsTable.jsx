@@ -1,5 +1,6 @@
 import React from 'react';
-import PodInfo from './PodInfo.jsx'
+import PodInfo from './PodInfo.jsx' 
+import Flow from './FlowChart.js';
 
 const MetricsTable = (props) => {
 
@@ -24,6 +25,12 @@ const MetricsTable = (props) => {
     if (props.display === 'podInfo') {
       return (
         <PodInfo/>
+      )
+    }
+
+    if (props.display === 'flowChart'){
+      return (
+        <Flow/>
       )
     }
 

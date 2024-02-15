@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import SideBar from './SideBar.jsx'
 import Metrics from './Metrics.jsx'
+import Flow from './FlowChart.js';
 
 const Main = (props) => {
 
@@ -18,13 +19,22 @@ const Main = (props) => {
     return; 
   }
 
+ // FUNCTION TO CHANGE STATE FOR RENDERING 
+  const flowChartRender = (e) => {
+    setDisplay('flowChart');
+    return; 
+  }
+
 
 
   return (
 
     <div className='Main'>
-      <SideBar display={display} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
+      <SideBar display={display} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender} flowChartRender = {flowChartRender}/>
+     
       <Metrics display={display} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
+ 
+
     </div>
 
   )
