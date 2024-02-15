@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {userAuth} from '../context/AuthContent.js';
 import SideBar from './SideBar.jsx'
 import Metrics from './Metrics.jsx'
+import Flow from './FlowChart.js';
 
 const Main = (props) => {
 
@@ -20,6 +21,12 @@ const Main = (props) => {
     return;
   }
 
+ // FUNCTION TO CHANGE STATE FOR RENDERING 
+  const flowChartRender = (e) => {
+    setDisplay('flowChart');
+    return; 
+  }
+
   const homeRender = () => {
     setDisplay('');
     return;
@@ -30,8 +37,11 @@ const Main = (props) => {
   return (
 
     <div className='Main'>
-      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
+      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender} flowChartRender = {flowChartRender}/>
+     
       <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
+ 
+
     </div>
 
   )
