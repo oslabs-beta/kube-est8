@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom"; 
+import { BrowserRouter as Router, Route, Routes, Switch } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContent.js";
 import NavBar from "./components/NavBar.jsx";
 import Main from "./components/Main.jsx";
