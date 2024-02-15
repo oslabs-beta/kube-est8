@@ -26,7 +26,15 @@ export const AuthContextProvider = ({ children }) => {
           prompt: 'select_account'
         })
         //take auth and provider with pop up
-        signInWithPopup(auth, provider);
+        signInWithPopup(auth, provider)
+          .then((result) => {
+          // handle successful authentication
+            console.log('Authentication successful', result.user); 
+        })
+          .catch((error) => {
+          // handle authentication error 
+            console.log('Authentication error', error); 
+        }); 
         // signInWithRedirect(auth, provider);
     }
 
