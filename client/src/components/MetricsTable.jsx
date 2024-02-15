@@ -1,5 +1,6 @@
 import React from 'react';
 import NodeInfo from './NodeInfo.jsx'
+import Flow from './FlowChart.js';
 import { UserAuth } from '../context/AuthContent.js';
 
 const MetricsTable = (props) => {
@@ -27,6 +28,12 @@ const MetricsTable = (props) => {
     if (props.display === 'podInfo') {
       return (
         <NodeInfo/>
+      )
+    }
+
+    if (props.display === 'flowChart'){
+      return (
+        <Flow/>
       )
     }
 

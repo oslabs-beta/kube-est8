@@ -331,3 +331,9 @@ button {
   font-weight: bold;
   color: #009879;
 }
+
+.style {
+  background: red;
+  width: '100%';
+  height: 300;
+}
