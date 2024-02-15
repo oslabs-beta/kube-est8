@@ -14,6 +14,7 @@ module.exports = {
     open: true,
     hot: true,
     liveReload: true,
+    historyApiFallback: true,
     proxy: {
       "/metrics": "http://localhost:3000",
     },

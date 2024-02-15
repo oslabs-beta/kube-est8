@@ -29,7 +29,7 @@ const NodeInfo = (props) => {
 //     })
 //     .catch((error) => console.log(error));
 //   }, []);
-  
+
 // };
 
   // const handleRowClick = (index) => {
@@ -37,7 +37,7 @@ const NodeInfo = (props) => {
   //   setActiveRow(index);
   // }
 
-  
+
 
   return (
     <div>
@@ -47,7 +47,7 @@ const NodeInfo = (props) => {
       <p>Loading...</p>
     )} */}
 
-    
+
     {/* When we have the data from backend, we will use something like this to render it to the frontend */}
 
 
@@ -104,7 +104,6 @@ const NodeInfo = (props) => {
         </tr>
       </tbody>
     </table>
-
 
   </div>
 );
