@@ -36,7 +36,7 @@ const MetricsTable = (props) => {
     return (
       <div className='no-info'>
         <div className='no-info-text'>
-          Welcome, {user?.displayName}  to your <span className='text-span'>Kube Est8</span>.
+          Welcome to your <span className='text-span'>Kube Est8</span>, {user?.displayName}.
           <br></br>
           Please use the sidebar to render desired cluster info.
         </div>

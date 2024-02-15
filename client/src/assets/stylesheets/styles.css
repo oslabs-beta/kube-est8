@@ -155,7 +155,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2vmin;
+  padding: 0 5vmin;
 }
 
 .logout-button {
@@ -277,7 +277,7 @@ button {
   font-family: "Montserrat";
   font-size: min(5vh, 5vw);
   text-align: center;
-  padding: min(20vh, 20vw) 30px;
+  padding: 10vmin 20vmin;
 }
 
 .text-span {
