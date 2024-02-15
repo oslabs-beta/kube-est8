@@ -7,6 +7,8 @@ import Signin from './components/Signin.jsx';
 import WelcomePage from './components/WelcomePage.jsx'
 import Protected from './components/Protected.js'
 
+import Flow from "./components/FlowChart.js";
+import "./assets/stylesheets/styles.css";
 
 const App = () => {
   return (
@@ -25,5 +27,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
