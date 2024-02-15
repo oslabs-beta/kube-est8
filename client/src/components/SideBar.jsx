@@ -7,14 +7,15 @@ const SideBar = (props) => {
 
   const clusterMetricsList = ['cpu', 'memory']
 
+  // *** This handle click does a fetch, request and the front end is console login it
   const handleClick = () => {
     fetch('http://localhost:3333/metrics')
       .then((response) => response.json())
       .then((data) => {
 
 
+        // return <div>${data}</div>
 
-        
         console.log('This is the data -------->', data);
       })
       .catch((error) => console.log(error));
@@ -30,8 +31,8 @@ const SideBar = (props) => {
 
       <div class="sidebar-buttons">
         <a className='a-36' onClick={props.clusterInfoRender}>Cluster Overview</a>
-        {/* <a className='a-36' onClick={props.podInfoRender}>My Nodes</a> */}
-        <a className='a-36' onClick={handleClick}>My Nodes</a>
+        <a className='a-36' onClick={props.podInfoRender}>My Nodes</a>
+        {/* <a className='a-36' onClick={handleClick}>My Nodes</a> */}
         <a className='a-36' >Vulnerabilities Scan</a>
         <a className='a-36' >Settings</a>
       </div>
