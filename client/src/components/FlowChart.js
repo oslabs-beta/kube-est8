@@ -1,26 +1,33 @@
 
 import React, { Fragment } from "react";
 import { useState, useCallback } from 'react';
-import ReactFlow, { applyEdgeChanges, applyNodeChanges, Controls, Background } from 'reactflow';
+import ReactFlow, { applyEdgeChanges, applyNodeChanges, Controls, Background, MiniMap} from 'react-flow-renderer';
 
 import '../assets/stylesheets/FlowChart.css'
 
-const initialEdges = [{ id: 'e1-2', source: '1', target: '2', label: 'got to', type: 'straight' }];
+const initialEdges = [{ id: 'e1-2', source: '1', target: '2'}];
 
 const initialNodes = [
     {
       id: '1',
-      data: {label: 'Node'},
+      data: {label: 'Node 1'},
       position: { x: 0, y: 0 },
       type: 'input',
     },
     {
         id: '2',
-        data: {label: 'Node'},
+        data: {label: 'Node 2'},
         position: {x: 100, y: 100},
 
     },
   ];
+  const CustomNode = ({ id, data }) => {
+    return (
+      <div style={{ border: '1px solid #000', borderRadius: '8px', padding: '8px', backgroundColor: '#fff' }}>
+        {data.label}
+      </div>
+    );
+  };
 
 function Flow() {
     const [nodes, setNodes] = useState(initialNodes);
@@ -55,12 +62,26 @@ function Flow() {
 return (
   <div className="flow-container"  style = {{ height: '600px', width: '100%' }} >
 
-     <ReactFlow  nodes = {initialNodes} edges={initialEdges} >
-     {/* <div className="simple-background" /> */}
+     <ReactFlow 
+      edges={initialEdges}
+      nodes={initialNodes}  >
+  
+      <MiniMap 
+      nodeColor= {n=>{
+        if( n.type === 'input') return 'blue';
 
-          <Background className="custom-background"/> 
+        return '#FFCC00'
+      }}
+      />
       <Controls className="custom-controls" /> 
           </ReactFlow>
+          <div>
+          <input type="text"
+          name="title"/>
+          <button
+          type="button"/>
+          </div>
+          
           <button onClick={handleNodeAdd}>Add Node</button>
           <button onClick={handleEdgeAdd}>Add Edge</button>
 
