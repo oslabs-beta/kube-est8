@@ -4,11 +4,11 @@
   "description": "Kube Est8 is a Kubernetes Visualization tool that assists with detecting bottlenecks and security vulnerabilities.",
   "main": "./client/src/index.js",
   "scripts": {
+    "start": "node ./bin/www",
     "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "build": "webpack",
-    "start": "NODE_ENV=production node --watch server/server.js",
     "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --progress --color \" \"node --watch ./server/server.js\""
-    
   },
   "author": "Brandon Hernandez, Erika Wester, Ines Chavez, Patrick Post",
   "license": "ISC",
@@ -41,6 +41,7 @@
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "style-loader": "^3.3.4",
+    "supertest": "^6.3.4",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
