@@ -7,7 +7,4 @@ router.get('/', metricsController.getNodeList, (req,res) => {
   return res.status(200).send(res.locals.nodesList);
 });
 
-
-
-
 module.exports = router;

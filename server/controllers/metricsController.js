@@ -117,7 +117,4 @@ metricsController.getNodeList = async(req, res, next) => {
 
 };
 
-
-
-
 module.exports = metricsController;
