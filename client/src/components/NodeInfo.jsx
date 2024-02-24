@@ -6,6 +6,7 @@ const NodeInfo = (props) => {
   //and then is tranfer so is render into the Main display.
   const [nodesList, setNodesList] = useState([]);
 
+
   useEffect(() => {
     nodes();
   }, []);
