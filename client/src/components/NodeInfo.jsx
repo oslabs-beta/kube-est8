@@ -21,19 +21,19 @@ const NodeInfo = (props) => {
     <div>
       {nodesList.map((data) => {
         return (
-          <div className="something">
-          <p className="text">{`Name: ${data.name}`}</p> 
-          <p className="text">{`UID: ${data.uid}`}</p>
-          <p className="text">{`Day created: ${data.creationTimestamp}`}</p>
-          <p className="text">{`CPU capacity: ${data.capacity.cpuCapacity}`}</p>
-          <p className="text">{`Memory capacity: ${data.capacity.memoryCapacity}`}</p>
-          <p className="text">{`Pod capacity: ${data.capacity.podsCapacity}`}</p>
-          <p className="text">{`Last heartbeat: ${data.presureStatus.lastHeartbeatTime}`}</p>
-          <p className="text">{`Kubelet status: ${data.presureStatus.status}`}</p>
-          <p className="text">{`Memory pressure: ${data.presureStatus.memoryPressure}`}</p>
-          <p className="text">{`Disk pressure: ${data.presureStatus.diskPressure}`}</p>
-          <p className="text">{`PID pressure: ${data.presureStatus.PIDPressure}`}</p>
-          <p className="text">{`Total images: ${data.totalImages}`}</p>
+          <div className="content">
+          <p className="row">{`Name: ${data.name}`}</p> 
+          <p className="row">{`UID: ${data.uid}`}</p>
+          <p className="row">{`Day created: ${data.creationTimestamp}`}</p>
+          <p className="row">{`CPU capacity: ${data.capacity.cpuCapacity}`}</p>
+          <p className="row">{`Memory capacity: ${data.capacity.memoryCapacity}`}</p>
+          <p className="row">{`Pod capacity: ${data.capacity.podsCapacity}`}</p>
+          <p className="row">{`Last heartbeat: ${data.presureStatus.lastHeartbeatTime}`}</p>
+          <p className="row">{`Kubelet status: ${data.presureStatus.status}`}</p>
+          <p className="row">{`Memory pressure: ${data.presureStatus.memoryPressure}`}</p>
+          <p className="row">{`Disk pressure: ${data.presureStatus.diskPressure}`}</p>
+          <p className="row">{`PID pressure: ${data.presureStatus.PIDPressure}`}</p>
+          <p className="row">{`Total images: ${data.totalImages}`}</p>
           <p>----------------------------------------------------------------</p>
           </div>
         )

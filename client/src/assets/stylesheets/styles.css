@@ -338,13 +338,13 @@ button {
   height: 300;
 }
 
-.something {
+.content {
   margin-left: 20px;
   margin-right: 300px;
   background-color: white;
 }
 
-.text {
+.row {
   color: rgb(56, 56, 175);
 }
 
