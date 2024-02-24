@@ -19,15 +19,10 @@ const metricsController = {};
 metricsController.getNodeList = async(req, res, next) => {
 
   try {
-    //.listNode is an API client method (native built in method)
     const whateverName = await k8sApi.listNode();; 
 
     // *** TODO *** Conver the memory in to Gigabytes
     // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    // The code below is functional if you use postman: -----
 
     res.locals.nodesList = [
 
