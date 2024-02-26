@@ -30,7 +30,7 @@ const metricsController: MetricsController = {
 
     try {
       //.listNode is an API client method (native built in method)
-      const whateverName = await k8sApi.listNode();; 
+      const data = await k8sApi.listNode();; 
   
       // *** TODO *** Conver the memory in to Gigabytes
       // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
@@ -38,79 +38,79 @@ const metricsController: MetricsController = {
       res.locals.nodesList = [
   
         {
-          name: whateverName.response.body.items[0].metadata.name,
-          uid: whateverName.response.body.items[0].metadata.uid,
-          creationTimestamp: whateverName.response.body.items[0].metadata.creationTimestamp,
+          name: data.response.body.items[0].metadata.name,
+          uid: data.response.body.items[0].metadata.uid,
+          creationTimestamp: data.response.body.items[0].metadata.creationTimestamp,
           capacity: {
-            cpuCapacity: whateverName.response.body.items[0].status.capacity.cpu,
-            memoryCapacity: whateverName.response.body.items[0].status.capacity.memory,
-            podsCapacity: whateverName.response.body.items[0].status.capacity.pods
+            cpuCapacity: data.response.body.items[0].status.capacity.cpu,
+            memoryCapacity: data.response.body.items[0].status.capacity.memory,
+            podsCapacity: data.response.body.items[0].status.capacity.pods
           },
           presureStatus: {
-            lastHeartbeatTime: whateverName.response.body.items[0].status.conditions[0].lastHeartbeatTime,
-            memoryPressure: whateverName.response.body.items[0].status.conditions[0].message,
-            diskPressure: whateverName.response.body.items[0].status.conditions[1].message,
-            PIDPressure: whateverName.response.body.items[0].status.conditions[2].message,
-            status: whateverName.response.body.items[0].status.conditions[3].message
+            lastHeartbeatTime: data.response.body.items[0].status.conditions[0].lastHeartbeatTime,
+            memoryPressure: data.response.body.items[0].status.conditions[0].message,
+            diskPressure: data.response.body.items[0].status.conditions[1].message,
+            PIDPressure: data.response.body.items[0].status.conditions[2].message,
+            status: data.response.body.items[0].status.conditions[3].message
           },
-          totalImages: whateverName.response.body.items[0].status.images.length
+          totalImages: data.response.body.items[0].status.images.length
         },
   
         {
-          name: whateverName.response.body.items[1].metadata.name,
-          uid: whateverName.response.body.items[1].metadata.uid,
-          creationTimestamp: whateverName.response.body.items[1].metadata.creationTimestamp,
+          name: data.response.body.items[1].metadata.name,
+          uid: data.response.body.items[1].metadata.uid,
+          creationTimestamp: data.response.body.items[1].metadata.creationTimestamp,
           capacity: {
-            cpuCapacity: whateverName.response.body.items[1].status.capacity.cpu,
-            memoryCapacity: whateverName.response.body.items[1].status.capacity.memory,
-            podsCapacity: whateverName.response.body.items[1].status.capacity.pods
+            cpuCapacity: data.response.body.items[1].status.capacity.cpu,
+            memoryCapacity: data.response.body.items[1].status.capacity.memory,
+            podsCapacity: data.response.body.items[1].status.capacity.pods
           },
           presureStatus: {
-            lastHeartbeatTime: whateverName.response.body.items[1].status.conditions[0].lastHeartbeatTime,
-            memoryPressure: whateverName.response.body.items[1].status.conditions[0].message,
-            diskPressure: whateverName.response.body.items[1].status.conditions[1].message,
-            PIDPressure: whateverName.response.body.items[1].status.conditions[2].message,
-            status: whateverName.response.body.items[1].status.conditions[3].message
+            lastHeartbeatTime: data.response.body.items[1].status.conditions[0].lastHeartbeatTime,
+            memoryPressure: data.response.body.items[1].status.conditions[0].message,
+            diskPressure: data.response.body.items[1].status.conditions[1].message,
+            PIDPressure: data.response.body.items[1].status.conditions[2].message,
+            status: data.response.body.items[1].status.conditions[3].message
           },
-          totalImages: whateverName.response.body.items[1].status.images.length
+          totalImages: data.response.body.items[1].status.images.length
         },
   
         {
-          name: whateverName.response.body.items[2].metadata.name,
-          uid: whateverName.response.body.items[2].metadata.uid,
-          creationTimestamp: whateverName.response.body.items[2].metadata.creationTimestamp,
+          name: data.response.body.items[2].metadata.name,
+          uid: data.response.body.items[2].metadata.uid,
+          creationTimestamp: data.response.body.items[2].metadata.creationTimestamp,
           capacity: {
-            cpuCapacity: whateverName.response.body.items[2].status.capacity.cpu,
-            memoryCapacity: whateverName.response.body.items[2].status.capacity.memory,
-            podsCapacity: whateverName.response.body.items[2].status.capacity.pods
+            cpuCapacity: data.response.body.items[2].status.capacity.cpu,
+            memoryCapacity: data.response.body.items[2].status.capacity.memory,
+            podsCapacity: data.response.body.items[2].status.capacity.pods
           },
           presureStatus: {
-            lastHeartbeatTime: whateverName.response.body.items[2].status.conditions[0].lastHeartbeatTime,
-            memoryPressure: whateverName.response.body.items[2].status.conditions[0].message,
-            diskPressure: whateverName.response.body.items[2].status.conditions[1].message,
-            PIDPressure: whateverName.response.body.items[2].status.conditions[2].message,
-            status: whateverName.response.body.items[2].status.conditions[3].message
+            lastHeartbeatTime: data.response.body.items[2].status.conditions[0].lastHeartbeatTime,
+            memoryPressure: data.response.body.items[2].status.conditions[0].message,
+            diskPressure: data.response.body.items[2].status.conditions[1].message,
+            PIDPressure: data.response.body.items[2].status.conditions[2].message,
+            status: data.response.body.items[2].status.conditions[3].message
           },
-          totalImages: whateverName.response.body.items[2].status.images.length
+          totalImages: data.response.body.items[2].status.images.length
         },
   
         {
-          name: whateverName.response.body.items[3].metadata.name,
-          uid: whateverName.response.body.items[3].metadata.uid,
-          creationTimestamp: whateverName.response.body.items[3].metadata.creationTimestamp,
+          name: data.response.body.items[3].metadata.name,
+          uid: data.response.body.items[3].metadata.uid,
+          creationTimestamp: data.response.body.items[3].metadata.creationTimestamp,
           capacity: {
-            cpuCapacity: whateverName.response.body.items[3].status.capacity.cpu,
-            memoryCapacity: whateverName.response.body.items[3].status.capacity.memory,
-            podsCapacity: whateverName.response.body.items[3].status.capacity.pods
+            cpuCapacity: data.response.body.items[3].status.capacity.cpu,
+            memoryCapacity: data.response.body.items[3].status.capacity.memory,
+            podsCapacity: data.response.body.items[3].status.capacity.pods
           },
           presureStatus: {
-            lastHeartbeatTime: whateverName.response.body.items[3].status.conditions[0].lastHeartbeatTime,
-            memoryPressure: whateverName.response.body.items[3].status.conditions[0].message,
-            diskPressure: whateverName.response.body.items[3].status.conditions[1].message,
-            PIDPressure: whateverName.response.body.items[3].status.conditions[2].message,
-            status: whateverName.response.body.items[3].status.conditions[3].message
+            lastHeartbeatTime: data.response.body.items[3].status.conditions[0].lastHeartbeatTime,
+            memoryPressure: data.response.body.items[3].status.conditions[0].message,
+            diskPressure: data.response.body.items[3].status.conditions[1].message,
+            PIDPressure: data.response.body.items[3].status.conditions[2].message,
+            status: data.response.body.items[3].status.conditions[3].message
           },
-          totalImages: whateverName.response.body.items[3].status.images.length
+          totalImages: data.response.body.items[3].status.images.length
         }
   
       ];
