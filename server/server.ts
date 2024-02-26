@@ -7,7 +7,7 @@ import metricsRouter from './routes/metricsRouter'; // Assuming you'll also conv
 dotenv.config();
 
 const app: Express = express();
-const port: string | number = process.env.PORT || 3000;
+const port: string | number = process.env.PORT || 3333;
 
 // HANDLE PARSING OF REQUEST BODY
 app.use(express.json());

@@ -25,7 +25,7 @@ const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 // const metricsController = {};
 
 
-export const metricsController: MetricsController = {
+const metricsController: MetricsController = {
   // Now you can safely assign getNodeList to it
   getNodeList: async (req, res, next) => {
 
@@ -123,3 +123,5 @@ export const metricsController: MetricsController = {
     };
   }
 };
+
+export default metricsController;
