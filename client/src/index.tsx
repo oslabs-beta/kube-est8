@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";import Flow from './components/
 import App from "./App.jsx";
 
 //changed root variable source to createRoot
-const root = createRoot(document.getElementById('root')); 
+const root = createRoot(document.getElementById('root') as HTMLElement) ; 
 root.render(
 <BrowserRouter>
     <App />
