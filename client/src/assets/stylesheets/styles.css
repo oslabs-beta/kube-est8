@@ -241,20 +241,33 @@ button {
 }
 
 .Metrics {
+  display: flex;
+  flex-direction: column;
   grid-column-start: 1;
   grid-column-end: -1;
 }
 
 .MetricsTable {
-  margin: calc(5vh + 1px);
+  /* margin: calc(5vh + 1px); */
   display: grid;
   justify-items: center;
+}
+
+.MetricsTable>* {
+  width: 100%;
 }
 
 .grafana1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+}
+
+.grafana1>* {
+  width: 100%;
+}
+
+.grafanaGraph {
 }
 
 /* iframe {
