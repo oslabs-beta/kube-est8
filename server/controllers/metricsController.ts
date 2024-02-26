@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
+
 //import Kubernetes API client package
 const k8s = require('@kubernetes/client-node');
 
@@ -24,7 +25,7 @@ const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 // const metricsController = {};
 
 
-const metricsController: MetricsController = {
+export const metricsController: MetricsController = {
   // Now you can safely assign getNodeList to it
   getNodeList: async (req, res, next) => {
 
@@ -122,6 +123,3 @@ const metricsController: MetricsController = {
     };
   }
 };
-
-
-module.exports = metricsController;

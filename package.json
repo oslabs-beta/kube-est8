@@ -8,7 +8,7 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
-    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --progress --color \" \"node --watch ./server/server.js\""
+    "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open --hot --progress --color\" \"nodemon ./server/server.js\""
   },
   "author": "Brandon Hernandez, Erika Wester, Ines Chavez, Patrick Post",
   "license": "ISC",
@@ -34,6 +34,9 @@
     "@babel/plugin-syntax-jsx": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.58",
@@ -46,6 +49,7 @@
     "jest": "^29.7.0",
     "style-loader": "^3.3.4",
     "supertest": "^6.3.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4",
