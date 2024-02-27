@@ -36,5 +36,20 @@ npm i
 npm start
 ```
 
+## Spinning up Kubernetes
+
+The Kubernetes command-line tool, [kubectl](https://kubernetes.io/releases/download/), allows you to run commands against Kubernetes clusters.
+
+Kube-Est8 will connect to the cluster configured in your [kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) file.
+
+
+
+## Setting up Kubernetes Metrics Server
+
+[Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server) collects resource metrics from Kubelets and exposes them in Kubernetes apiserver.
+
+
+
+
 
 ## Tests
