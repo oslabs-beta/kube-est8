@@ -45,7 +45,7 @@ Kube-Est8 will connect to the cluster configured in your [`/kubeconfig`](https:/
 
 
 
-## Setting up Kubernetes Metrics Server
+## Setting up Metrics Server
 
 [Kubernetes Metrics Server](https://github.com/kubernetes-sigs/metrics-server) collects resource metrics from Kubelets and exposes them in Kubernetes apiserver.
 
