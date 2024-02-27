@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <i align="center">Monitor your Kubernetes cluster's resource usage and vulnerabilities across different levels 🖥️</i>
+  <i align="center">Monitor your Kubernetes cluster's resource usage and vulnerabilities across different levels </i>🖥️
 </p>
 
 <h4 align="center">
