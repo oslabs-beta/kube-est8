@@ -59,7 +59,7 @@ Kube-Est8 will connect to the cluster configured in your [`/kubeconfig`](https:/
 The latest Prometheus version can be found on [DockerHub](https://hub.docker.com/r/prom/prometheus/tags).
 
 ### Namespace
-We can create a new namespace for our Prometheus deployment objects: `kubectl create namespace monitoring`
+We can create a new namespace for our Prometheus deployment objects: `kubectl create namespace monitoring`.
 
 ### RBAC Policy
 We need to create an RBAC policy with read access to required API groups and bind the policy to the monitoring namespace because Prometheus uses Kubernetes APIs to read metrics.
