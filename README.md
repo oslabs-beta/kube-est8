@@ -1,8 +1,6 @@
 
 <h1 align="center">
-    Kube-Est8
-    <br>
-    <img src="./client/src/assets/images/logo.png" style="height: 300px;">
+    <img src="./client/src/assets/images/Kube-EST8.png" style="height: 300px;">
 </h1>
 
 <p align="center">
