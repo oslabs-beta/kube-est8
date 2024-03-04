@@ -72,6 +72,15 @@ Next, create and configure your `prometheus-deployment.yaml`. It can be created 
 ### Accessing Prometheus Dashboard
 Can be accessed by exposing Prometheus as a service by creating and configuring your `prometheus-service.yaml` file using a nodeport type, then using `kubectl create -f prometheus-service.yaml --namespace=monitoring` to create service.
 
+## Setting up Grafana
+[Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/mac/) is one of the best open source visualization tools. It can be easily integrated with Prometheus for visualizing all the target metrics.
+
+After starting your Grafana server:
+1. Log in to Grafana Dashboard
+2. Set Prometheus server as source
+3. Set up dashboard panels
+
+After that, your panels will be available for use.
 
 
 
@@ -79,4 +88,6 @@ Can be accessed by exposing Prometheus as a service by creating and configuring 
 
 
 
-## Tests
+
+
+
