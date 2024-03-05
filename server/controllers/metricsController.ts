@@ -31,13 +31,13 @@ const metricsController: MetricsController = {
 
     try {
       //.listNode is an API client method (native built in method)
-      const data = await k8sApi.listNode();; 
-  
+      const data = await k8sApi.listNode();
+
       // *** TODO *** Conver the memory in to Gigabytes
       // const memoryInGb = (8029624 * 1024) / (1024 ** 3).toFixed(2)
-  
+
       res.locals.nodesList = [
-  
+
         {
           name: data.response.body.items[0].metadata.name,
           uid: data.response.body.items[0].metadata.uid,
@@ -56,7 +56,7 @@ const metricsController: MetricsController = {
           },
           totalImages: data.response.body.items[0].status.images.length
         },
-  
+
         {
           name: data.response.body.items[1].metadata.name,
           uid: data.response.body.items[1].metadata.uid,
@@ -75,7 +75,7 @@ const metricsController: MetricsController = {
           },
           totalImages: data.response.body.items[1].status.images.length
         },
-  
+
         {
           name: data.response.body.items[2].metadata.name,
           uid: data.response.body.items[2].metadata.uid,
@@ -94,7 +94,7 @@ const metricsController: MetricsController = {
           },
           totalImages: data.response.body.items[2].status.images.length
         },
-  
+
         {
           name: data.response.body.items[3].metadata.name,
           uid: data.response.body.items[3].metadata.uid,
@@ -113,11 +113,11 @@ const metricsController: MetricsController = {
           },
           totalImages: data.response.body.items[3].status.images.length
         }
-  
+
       ];
-  
+
       return next();
-  
+
     } catch (err) {
       console.error(err);
     };
