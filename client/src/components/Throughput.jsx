@@ -8,7 +8,13 @@ const Throughput = (props) => {
     <div className='throughput'>
 
 
+      {/*
+        REQUEST HERE TO BACKEND SERVER
+        WHERE KUBERNETES API WILL BE
+        INTERACTED WITH. RENDER ADDITIONAL DISPLAYS.
 
+
+       */}
 
 
 
