@@ -8,7 +8,7 @@ router.get('/', metricsController.getNodeList, (req: Request, res: Response) => 
   return res.status(200).send(res.locals.nodesList);
 });
 
-router.get('/throughput', throughputController.getThroughputData, (req: Request, res: Response) => {
+router.get('/throughput', throughputController.getThroughput, (req: Request, res: Response) => {
   return res.status(200).send(res.locals.throughputData);
 })
 

@@ -37,7 +37,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   return res.status(errorObj.status).json(errorObj.message);
 });
 
-app.listen(port, () => {
+app.listen(3333, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
 

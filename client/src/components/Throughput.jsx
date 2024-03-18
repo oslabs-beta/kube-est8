@@ -7,7 +7,7 @@ const Throughput = (props) => {
   return (
     <div className='throughput'>
 
-
+    Throughput here
       {/*
         REQUEST HERE TO BACKEND SERVER
         WHERE KUBERNETES API WILL BE
@@ -16,7 +16,9 @@ const Throughput = (props) => {
 
        */}
 
+       <div className='throughput-container'>
 
+       </div>
 
 
 
