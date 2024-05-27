@@ -11,7 +11,7 @@ const NodeInfo = (props) => {
   }, []);
 
   const nodes = async () => {
-    const response = await fetch('http://localhost:3333/metrics');
+    const response = await fetch('/metrics');
 
     setNodesList(await response.json())
   };

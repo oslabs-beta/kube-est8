@@ -16,7 +16,7 @@ module.exports = {
     liveReload: true,
     historyApiFallback: true,
     proxy: {
-      "/metrics": "http://localhost:3333",
+      "/": "http://localhost:3333",
     },
   },
   module: {
