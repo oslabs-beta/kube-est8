@@ -1,0 +1,14 @@
+.flow-container {
+    width: 100;
+    height: 500px;
+    background-color: rgb(62, 9, 32);
+}
+.custom-background {
+    z-index: -1; /* Lower the z-index */
+    opacity: 0.5; /* Reduce the opacity */
+    
+}
+.custom-controls {
+    z-index: 20;
+}
+

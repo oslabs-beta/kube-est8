@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-stone-900);
+  color: var(--white);
+  --white: #f0f0f0;
+  --dark-gray: #18181b;
+  --background-blue: #363349;
+  --background-gray: #232328;
+  --background-stone: #0c0a09;
+  --background-stone-900: #1c1917;
+  --background-stone-800: #292524;
+  --background-stone-600: #57534E;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+  gap: 10vw;
+  > * {
+    padding: 20px;
+  }
+}
+
+.logo {
+  height: 15vmin;
+  border-radius: 50%;
+  border: 3px solid var(--dark-gray);
+  padding: 0;
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+  margin-top: 50px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logo:active {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+}
+
+.mainTitle {
+  font-family: "Montserrat", "Copperplate";
+  text-align: center;
+}
+
+/* NAVBAR SIGN IN BUTTON */
+
+.signInLink {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7em;
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #3d8ce0; /* Sign In button background color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+
+  /* Additional styles for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.go-main {
+  margin-top: 10vmin;
+}
+
+.go-main>a {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 2rem 4rem;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #3d8ce0; /* Sign In button background color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+
+  /* Additional styles for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer;
+
+  /* margin: 1vmin 5vmin; */
+}
+
+.go-main>a:hover {
+  background-color: #469dfa;
+}
+
+
+.signin-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vmin;
+}
+
+.signin-container {
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--background-stone-800);
+  background-color: var(--background-stone);
+  box-shadow: 5px 7px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.google-signin {
+  margin: 5vmin 5vmin;
+}
+
+.signInLink:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.root {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  border: none;
+  /* grid-template-rows: 1fr 5fr; */
+}
+
+.NavBar {
+  background-color: var(--background-stone);
+  border: 1px solid var(--background-stone-800);
+  box-shadow: 0 7px 10px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vmin;
+}
+
+.logout-button {
+  height: 25%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--background-stone-600);
+  font-weight: bold;
+  font-size: 0.7em;
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid var(--background-stone-800);
+  background-color: var(--background-stone-900); /* Sign In button background color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+
+  /* Additional styles for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  cursor: pointer;
+}
+
+
+
+.logout-button:hover {
+  background-color: var(--background-stone-800);
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.Sidebar {
+  grid-column-start: 0;
+  grid-column-end: 1;
+  width: 20vw;
+
+  background-color: var(--background-stone);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid var(--background-stone-800);
+}
+
+button {
+  cursor: pointer;
+  background-color: #3f3f46;
+  color: #d4d4d4;
+}
+
+.sidebar-buttons {
+  width: 100%;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-buttons > * {
+  text-align: center;
+  width: 100%;
+  font-size: min(2vw, 2vh);
+  padding: 20px 0;
+  font-family: "Montserrat";
+  /* border-top: 1px solid gray; */
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.sidebar-buttons > *:first-child {
+  border-top: 1px solid gray;
+}
+
+.sidebar-buttons > *:hover {
+  color: white;
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.423);
+}
+
+.Main {
+  flex: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.Metrics {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.MetricsTable {
+  /* margin: calc(5vh + 1px); */
+  display: grid;
+  justify-items: center;
+}
+
+.MetricsTable>* {
+  width: 100%;
+}
+
+.grafana1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.grafana1>* {
+  width: 100%;
+}
+
+.grafanaGraph {
+}
+
+/* iframe {
+  width: 100%;
+  height: 300px;
+} */
+
+.graph {
+  width: 80%;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.no-info {
+  display: flex;
+  justify-content: center;
+}
+
+.no-info-text {
+  font-family: "Montserrat";
+  font-size: min(5vh, 5vw);
+  text-align: center;
+  padding: 10vmin 20vmin;
+}
+
+.text-span {
+  color: #455eb5;
+}
+
+.dataTitle {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  color: var(--white);
+}
+
+/* NODE INFO STYLING */
+
+.nodes-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.nodes-table thead tr {
+  background-color: #021e18;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.nodes-table th,
+.nodes-table td {
+  padding: 12px 15px;
+}
+
+.nodes-table tbody tr {
+  border-bottom: 1px solid #dddddddd;
+}
+
+.nodes-table tbody tr:nth-of-type(even) {
+  background-color: rgb(2, 44, 42);
+}
+
+.nodes-table tbody tr:last-of-type {
+  border-bottom: 2px solid #011e18;
+}
+
+.nodes-table tbody tr:active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.style {
+  background: red;
+  width: '100%';
+  height: 300;
+}
