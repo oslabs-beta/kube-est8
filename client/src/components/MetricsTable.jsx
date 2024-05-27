@@ -1,6 +1,7 @@
 import React from 'react';
 import NodeInfo from './NodeInfo.jsx'
 import Flow from './FlowChart.js';
+import Throughput from './Throughput.jsx'
 import { UserAuth } from '../context/AuthContent.js';
 
 const MetricsTable = (props) => {
@@ -25,7 +26,8 @@ const MetricsTable = (props) => {
       )
     }
 
-    if (props.display === 'podInfo') {
+      /*-------------------CONDITIONALLY RENDER NODE INFO BASED ON STATE-----------------*/
+    if (props.display === 'nodeInfo') {
       return (
         <NodeInfo/>
       )
@@ -34,6 +36,12 @@ const MetricsTable = (props) => {
     if (props.display === 'flowChart'){
       return (
         <Flow/>
+      )
+    }
+
+    if (props.display === 'throughput') {
+      return (
+        <Throughput/>
       )
     }
 

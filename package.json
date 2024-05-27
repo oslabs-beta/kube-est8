@@ -4,7 +4,7 @@
   "description": "Kube Est8 is a Kubernetes Visualization tool that assists with detecting bottlenecks and security vulnerabilities.",
   "main": "./client/src/index.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "nodemon server/server.ts",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
     "build": "webpack",
@@ -21,6 +21,7 @@
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
     "firebase": "^10.8.0",
+    "nodemon": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flow": "^1.0.3",

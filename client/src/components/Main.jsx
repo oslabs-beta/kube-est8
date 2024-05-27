@@ -16,15 +16,15 @@ const Main = (props) => {
   }
 
   // FUNCTION TO CHANGE STATE FOR RENDERING POD INFO
-  const podInfoRender = (e) => {
-    setDisplay('podInfo');
+  const nodeInfoRender = (e) => {
+    setDisplay('nodeInfo');
     return;
   }
 
- // FUNCTION TO CHANGE STATE FOR RENDERING 
+ // FUNCTION TO CHANGE STATE FOR RENDERING
   const flowChartRender = (e) => {
     setDisplay('flowChart');
-    return; 
+    return;
   }
 
   const homeRender = () => {
@@ -32,15 +32,19 @@ const Main = (props) => {
     return;
   }
 
+  const throughputRender = (e) => {
+    setDisplay('throughput');
+    return;
+  }
 
 
   return (
 
     <div className='Main'>
-      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender} flowChartRender = {flowChartRender}/>
-     
-      <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} podInfoRender={podInfoRender}/>
- 
+      <SideBar display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} nodeInfoRender={nodeInfoRender} flowChartRender = {flowChartRender} throughputRender={throughputRender}/>
+
+      <Metrics display={display} homeRender={homeRender} clusterInfoRender={clusterInfoRender} nodeInfoRender={nodeInfoRender}/>
+
 
     </div>
 
